@@ -5,3 +5,44 @@
 #think:hover {
   transform: rotateY(180deg);
 }
+
+.carousel {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel::scroll-button(*) {
+  border-radius: 100px;
+  height: 55px;
+  width: 55px;
+  background-color: white;
+}
+.carousel::scroll-button(left) {
+  content: "<";
+}
+.carousel::scroll-button(right) {
+  content: ">";
+}
+.projectCard {
+  padding: 10px;
+  background-color: grey;
+  margin: 15px;
+  border-radius: 8px;
+  flex: 0 0 20em;
+  height: 25em;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+}
+
+.projectCard:hover {
+  transform: scale(1.1, 1.1);
+}

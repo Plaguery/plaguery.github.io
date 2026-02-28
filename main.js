@@ -1,8 +1,8 @@
-const vars = 23;
-
-console.log(`hello i am ${vars} years old`);
-console.log(1 * 3);
-console.error("error!");
-console.warn("warning");
-//prompt("hmm");
-//comment test
+const kira = document.querySelector("#kira");
+kira.addEventListener("mouseover", () => {
+  kira.setAttribute("src", "assets/kira2.png");
+});
+kira.addEventListener("mouseout", () => {
+  kira.setAttribute("src", "assets/kira.png");
+});
+console.log(kira);

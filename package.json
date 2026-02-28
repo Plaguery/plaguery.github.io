@@ -12,5 +12,13 @@
   "type": "commonjs",
   "dependencies": {
     "prompt-sync": "^4.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plaguery/website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Plaguery/website/issues"
+  },
+  "homepage": "https://github.com/Plaguery/website#readme"
 }
