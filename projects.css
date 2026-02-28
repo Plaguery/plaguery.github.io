@@ -1,0 +1,7 @@
+#think {
+  transition-duration: 2s;
+}
+
+#think:hover {
+  transform: rotateY(180deg);
+}

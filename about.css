@@ -1,0 +1,39 @@
+.carousel {
+  margin: auto;
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel::scroll-button(*) {
+  border-radius: 100px;
+  height: 55px;
+  width: 55px;
+  background-color: white;
+}
+.carousel::scroll-button(left) {
+  content: "<";
+}
+.carousel::scroll-button(right) {
+  content: ">";
+}
+.charCard {
+  padding: 10px;
+  background-color: grey;
+  margin: 15px;
+  border-radius: 8px;
+  flex: 0 0 20em;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+}
+
+.charCard:hover {
+  transform: scale(1.1, 1.1);
+}

@@ -1,0 +1,160 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  color: white;
+  background-image: url(https://i.allthepics.net/2026/02/27/unique_red_and_black_background_hd_red_aesthetic.md.jpg);
+  background-attachment: fixed;
+
+  background-color: rgb(20, 20, 20);
+}
+
+a {
+  text-decoration: none;
+}
+
+.metamorphous {
+  font-family: "Metamorphous", "Papyrus", serif;
+  font-weight: 400;
+  font-style: bold;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  width: 55vw;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.136);
+  margin: 0px 45px;
+}
+
+.wiggle {
+  animation-name: wiggle;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.button {
+  border: 3px groove white;
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  margin-left: 2%;
+  border-radius: 12px;
+  transition-duration: 0.2s;
+}
+
+.button:hover {
+  background-color: white;
+  color: red;
+  transform: scale(1.1, 1.1);
+}
+
+.fancytext {
+  font-size: large;
+  font-family: fantasy;
+}
+
+.relative {
+  position: relative;
+}
+
+.webbadge {
+  margin: 5px 0px;
+  border: 3px rgb(118, 0, 0) solid;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 15px;
+  font-size: 150%;
+  text-align: center;
+}
+
+#plagueroom {
+  transition: 0.3s ease-in-out;
+}
+#plagueroom:hover {
+  transform: scale(1.1, 1.1);
+  text-shadow: 0px 0px 30px red;
+}
+
+#topbar {
+  background-color: rgba(105, 105, 105, 0);
+  padding: 5px;
+  height: 30px;
+  align-items: flex-end;
+  position: sticky;
+}
+
+#mainwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+#mobile {
+  display: none;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateY(0px);
+    transform: rotate(0px);
+  }
+
+  50% {
+    transform: translateY(8px);
+    transform: rotate(15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+    transform: rotate(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 85vw;
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    font-size: x-small;
+  }
+  .about {
+    width: 100vw;
+  }
+
+  .relative {
+    display: none;
+  }
+
+  .wiggle {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  #welcome {
+    display: none;
+  }
+}
