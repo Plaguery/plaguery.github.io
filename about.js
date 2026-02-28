@@ -15,7 +15,59 @@ async function getBadges() {
   }
 }
 
-async function displayBadges() {}
+async function getBadgeIconUrl(badgeId) {
+  const url = `https://thumbnails.roproxy.com/v1/badges/icons?badgeIds=${badgeId},0&size=150x150&format=Png&isCircular=true`;
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    const data = await response.json();
+    return data["data"][0]["imageUrl"];
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function displayBadges() {
+  const data = await getBadges();
+  const badgeSection = document.querySelector("#badges");
+  for (badge of data) {
+    const id = badge["id"];
+    const badgeUrl = `https://www.roblox.com/badges/${id}/`;
+
+    //creates link to badge
+    const link = document.createElement("a");
+    link.setAttribute("href", badgeUrl);
+
+    //creates a display holder
+    var badgeDisplay = document.createElement("section");
+    badgeDisplay.classList.add("badgeDisplay");
+    link.appendChild(badgeDisplay);
+
+    //fetches badge image
+    const iconUrl = await getBadgeIconUrl(id);
+    var badgeIcon = document.createElement("img");
+    badgeIcon.setAttribute("src", iconUrl);
+    badgeIcon.setAttribute("height", "100px");
+    badgeIcon.setAttribute("width", "100px");
+
+    //add badge name
+    var badgeName = document.createElement("h4");
+    badgeName.textContent = badge["name"];
+    badgeName.classList.add("badgeName");
+
+    //appends to display
+    badgeDisplay.appendChild(badgeIcon);
+    badgeDisplay.appendChild(badgeName);
+
+    //appends everything to document
+    badgeSection.appendChild(link);
+
+    console.log(badge);
+  }
+}
 
 async function getAvatar() {
   const url =
@@ -36,7 +88,9 @@ async function displayAvatar() {
   const avatarImage = await getAvatar();
   const av = document.querySelector("#avatar");
   av.setAttribute("src", avatarImage);
+  av.setAttribute("width", "50%");
+  av.setAttribute("height", "auto");
 }
 
-getBadges();
+displayBadges();
 displayAvatar();

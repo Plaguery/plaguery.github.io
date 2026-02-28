@@ -1,13 +1,27 @@
-#kira:hover {
-  /** src: url(https://allthepics.net/image/kira-bleh.ykmag); **/
-}
-
-#charSection {
-  display: relative;
-}
-
 #about {
   display: flex;
   flex-direction: column;
   align-items: baseline;
+}
+
+.avatar {
+}
+.badgeDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-wrap: wrap;
+  box-sizing: border-box;
+}
+
+#badges {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+.badgeName {
+  margin-top: 20px;
+  text-align: center;
 }
