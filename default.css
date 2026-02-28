@@ -35,13 +35,6 @@ a {
   margin: 0px 45px;
 }
 
-.wiggle {
-  animation-name: wiggle;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
 .button {
   border: 3px groove white;
   text-decoration: none;
