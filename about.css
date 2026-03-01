@@ -1,10 +1,13 @@
 #about {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
-.avatar {
+#avatar {
+  background-color: white;
 }
 .badgeDisplay {
   display: flex;
@@ -12,6 +15,15 @@
   align-items: center;
   text-wrap: wrap;
   box-sizing: border-box;
+  padding: 5px;
+  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  transition-duration: 0.3s;
+  border-radius: 5px;
+}
+
+.badgeDisplay:hover {
+  background-color: rgba(255, 255, 255, 0.45);
 }
 
 #badges {
@@ -22,6 +34,13 @@
 }
 
 .badgeName {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
+}
+
+#stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

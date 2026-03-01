@@ -13,6 +13,8 @@
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  position: relative;
+  anchor-name: --carousel;
 }
 
 .carousel::-webkit-scrollbar {
@@ -27,9 +29,11 @@
 }
 .carousel::scroll-button(left) {
   content: "<";
+  position: relative;
 }
 .carousel::scroll-button(right) {
   content: ">";
+  position: relative;
 }
 .projectCard {
   padding: 10px;
@@ -45,4 +49,8 @@
 
 .projectCard:hover {
   transform: scale(1.1, 1.1);
+}
+
+#projects {
+  margin: 0 auto;
 }

@@ -22,6 +22,9 @@
   align-items: center;
 }
 
+.marquee {
+}
+
 #cheeseBox {
   position: relative;
   left: 150px;

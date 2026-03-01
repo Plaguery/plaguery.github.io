@@ -40,11 +40,7 @@ async function displayBadges() {
     //creates link to badge
     const link = document.createElement("a");
     link.setAttribute("href", badgeUrl);
-
-    //creates a display holder
-    var badgeDisplay = document.createElement("section");
-    badgeDisplay.classList.add("badgeDisplay");
-    link.appendChild(badgeDisplay);
+    link.classList.add("badgeDisplay");
 
     //fetches badge image
     const iconUrl = await getBadgeIconUrl(id);
@@ -59,13 +55,11 @@ async function displayBadges() {
     badgeName.classList.add("badgeName");
 
     //appends to display
-    badgeDisplay.appendChild(badgeIcon);
-    badgeDisplay.appendChild(badgeName);
+    link.appendChild(badgeIcon);
+    link.appendChild(badgeName);
 
     //appends everything to document
     badgeSection.appendChild(link);
-
-    console.log(badge);
   }
 }
 
@@ -92,5 +86,47 @@ async function displayAvatar() {
   av.setAttribute("height", "auto");
 }
 
+async function onlineStatus() {
+  try {
+    const response = await fetch(
+      "https://presence.roproxy.com/v1/presence/users",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          userIds: [296944867],
+        }),
+      },
+    );
+
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    const data = await response.json();
+    return data["userPresences"][0]["userPresenceType"];
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function displayStatus() {
+  const status = await onlineStatus();
+  var display = "Offline ⚫";
+  switch (status) {
+    case 1:
+      display = "On website 🔵";
+      break;
+    case 2:
+      display = "Ingame 🟢";
+      break;
+    default:
+      break;
+  }
+
+  const statusSection = document.querySelector("#status");
+  statusSection.textContent = display;
+}
+
+//display
 displayBadges();
 displayAvatar();
+displayStatus();
