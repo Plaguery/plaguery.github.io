@@ -25,16 +25,34 @@
   border-radius: 100px;
   height: 55px;
   width: 55px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.407);
+  color: rgb(255, 255, 255);
+  display: inline;
+}
+
+.carousel::scroll-button(*):hover {
+  background-color: rgba(255, 255, 255, 0.232);
+  color: rgb(255, 255, 255);
+  display: inline;
+}
+
+.carousel::scroll-button(*):disabled {
+  background-color: rgba(255, 255, 255, 0.232);
+  color: black;
 }
 .carousel::scroll-button(left) {
-  content: "<";
+  content: "◄";
   position: relative;
+  top: -40%;
+  left: -5%;
 }
 .carousel::scroll-button(right) {
-  content: ">";
+  content: "►";
   position: relative;
+  top: -47%;
+  left: 98%;
 }
+
 .projectCard {
   padding: 10px;
   background-color: grey;
@@ -42,15 +60,21 @@
   border-radius: 8px;
   flex: 0 0 20em;
   height: 25em;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   scroll-snap-stop: always;
   overflow: hidden;
 }
 
 .projectCard:hover {
+  border-radius: 15px;
   transform: scale(1.1, 1.1);
 }
 
 #projects {
   margin: 0 auto;
+}
+
+::selection {
+  color: white;
+  background-color: black;
 }

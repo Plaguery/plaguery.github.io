@@ -15,6 +15,13 @@
   color: rgb(34, 2, 2);
 }
 
+#socials img {
+  transition-duration: 0.3s;
+}
+
+#socials img:hover {
+  transform: scale(1.15, 1.15);
+}
 .center {
   display: flex;
   flex-direction: column;
