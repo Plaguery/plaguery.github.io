@@ -8,6 +8,7 @@
 
 #avatar {
   background-color: white;
+  margin: 15px auto;
 }
 .badgeDisplay {
   display: flex;
