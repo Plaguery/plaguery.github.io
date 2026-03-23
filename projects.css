@@ -7,7 +7,7 @@
 }
 
 .carousel {
-  margin: auto;
+  margin: 0px;
   display: flex;
   width: 100%;
   overflow-x: auto;
@@ -43,13 +43,13 @@
 .carousel::scroll-button(left) {
   content: "◄";
   position: relative;
-  top: -40%;
+  top: -16em;
   left: -5%;
 }
 .carousel::scroll-button(right) {
   content: "►";
   position: relative;
-  top: -47%;
+  top: -20em;
   left: 98%;
 }
 
@@ -67,13 +67,17 @@
 
 .projectCard:hover {
   border-radius: 15px;
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
+  transition: transform 0.5s;
 }
 
 #projects {
   margin: 0 auto;
 }
 
+#projectText * {
+  text-align: center;
+}
 ::selection {
   color: white;
   background-color: black;

@@ -1,14 +1,16 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="default.css" />
-  <link rel="stylesheet" href="projects.css" />
-
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap"
     rel="stylesheet"
   />
+
+  <script src="main.js" defer></script>
   <meta
     http-equiv="onion-location"
     content="http://plagueryxiwi66vtikp55vqkt4axueawsuxh454bdvffnkz7ghcfycqd.onion"
@@ -24,6 +26,7 @@
       src="https://i.allthepics.net/2026/02/27/rat792b7a48eed1b37b.png"
     />
     <div id="title">
+      <h2 class="metamorphous" id="welcome">welcome to</h2>
       <h1
         class="metamorphous"
         id="plagueroom"
@@ -47,29 +50,29 @@
     <a href="about.html" class="button">about me 🐀</a>
   </nav>
 
-  <div class="content" id="projects">
-    <section>
-      <div id="projectText">
-        <h2 class="metamorphous">Projects</h2>
-        <p>to be upated as i make more projects!</p>
-      </div>
-      <div class="carousel">
-        <div class="projectCard">
-          <h3>The Plagueroom</h3>
-          <p>you're here right now!</p>
-          <img
-            height="90%"
-            id="think"
-            src="https://media1.tenor.com/m/E0IqRNXD-k4AAAAC/thinking-thought.gif"
-          />
+  <div class="row" id="mainWrapper">
+    <div class="content">
+      <section>
+        <h2>Favorite Characters!!!</h2>
+        <h3>awesome...</h3>
+        <div class="relative" id="charSection">
+          <img id="kira" height="175px" src="assets/kira.png" />
+          <img id="fugo" height="175px" src="assets/charfugo.png" />
+          <img id="hol" height="175px" src="assets/chrholhorse.png" />
+          <!-- <img height="175px" src="assets/chranya.png" />
+          <img id="fugo" height="175px" src="assets/charfugo.png" />
+          <img id="hol" height="175px" src="assets/chrholhorse.png" />
+          <img height="175px" src="assets/chartheflash.png" />
+          <img height="175px" src="assets/chrsangwoo.png" /> -->
         </div>
-        <div class="projectCard">
-          <img src="assets/underconstruction.png" />
+      </section>
+
+      <section>
+        <div id="gameSection">
+          <img id="computer" src="assets/computer.png" />
+          <div id="click"><img src="assets/clickme.png" /></div>
         </div>
-        <div class="projectCard">
-          <img src="assets/underconstruction.png" />
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </body>

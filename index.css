@@ -15,7 +15,13 @@
   color: rgb(34, 2, 2);
 }
 
+#socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #socials img {
+  margin: 5% 0%;
   transition-duration: 0.3s;
 }
 
@@ -29,7 +35,15 @@
   align-items: center;
 }
 
-.marquee {
+#aboutme {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.136);
+  padding: 0% 10%;
+  margin-bottom: 5%;
+}
+
+#aboutme td {
+  width: 50%;
 }
 
 #cheeseBox {
@@ -44,6 +58,38 @@
   color: black;
 }
 
+#computer {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+  position: relative;
+}
+
+#click {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 1;
+  width: 83%;
+  height: 55%;
+  overflow: hidden;
+}
+
+#click:hover {
+  cursor:
+    url("assets/pointer.png") 20 20,
+    auto;
+}
+
+#click img {
+  height: 100%;
+  width: 100%;
+}
+
+#gameSection {
+  position: relative;
+}
 @media (max-width: 1024px) {
   #cheeseBox {
     left: 10;

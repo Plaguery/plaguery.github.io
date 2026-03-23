@@ -46,12 +46,10 @@ section {
   display: flex;
   flex-direction: column;
   height: 100%;
+  width: auto;
   background-color: rgba(255, 255, 255, 0.136);
   padding: 10px;
-}
-
-.bottommargin {
-  margin-bottom: 50px;
+  margin-bottom: 5%;
 }
 
 .button {
@@ -127,6 +125,34 @@ section {
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+}
+
+.marquee {
+  margin-top: 10px;
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  padding: 4px 0%;
+}
+
+.marquee div {
+  animation-name: marquee-content;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+
+.marquee:hover div {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-content {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes wiggle {

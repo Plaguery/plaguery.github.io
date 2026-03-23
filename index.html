@@ -1,7 +1,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="default.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="index.css" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     content="http://plagueryxiwi66vtikp55vqkt4axueawsuxh454bdvffnkz7ghcfycqd.onion"
   />
 </head>
-<body class="hidden">
+<body>
   <!-- title segment-->
   <div class="row">
     <img
@@ -45,7 +45,7 @@
 
   <!-- top bar links-->
   <nav class="row" id="topbar">
-    <a href="thoughts.html" class="button">thoughts 💭</a>
+    <a href="interests.html" class="button">interests 💭</a>
     <a href="projects.html" class="button">projects 🏗️</a>
     <a href="about.html" class="button">about me 🐀</a>
   </nav>
@@ -53,55 +53,42 @@
   <div class="row" id="mainWrapper">
     <aside class="sidebar">
       <div id="socials">
-        <h3>Come find me on</h3>
+        <h3>CONTACT</h3>
+        <p>come find me on</p>
+
         <a href="https://discordapp.com/users/694605691716894820">
-          <img height="50px" width="50px" src="assets\discord.ico"
+          <img src="assets\discord.gif"
         /></a>
         <a href="https://www.roblox.com/users/296944867/profile"
-          ><img height="50px" width="50px" src="assets/roblox.ico"
-        /></a>
-        <a href="file:///C:/plaguery"
-          ><img height="50px" width="50px" src="assets/explorer.ico"
+          ><img src="assets/roblox.png"
         /></a>
       </div>
-      <img src="assets/jojolands.gif" />
     </aside>
     <div class="content">
-      <section class="row bottommargin">
-        <div id="about">
-          <h2>home</h2>
-          <p class="metamorphous">i'm plague</p>
-          <p>whaddup. i'm canadian! 🍁</p>
-          <p>that's really all you need to know</p>
-        </div>
-
-        <div class="relative">
-          <div id="cheeseBox">
-            <pre id="cheesedText">
+      <table id="aboutme">
+        <tr>
+          <td>
+            <div id="about">
+              <h2>home</h2>
+              <p class="metamorphous">i'm plague</p>
+              <p>whaddup. i'm canadian! 🍁</p>
+              <p>that's really all you need to know</p>
+            </div>
+          </td>
+          <td>
+            <div class="relative">
+              <div id="cheeseBox">
+                <pre id="cheesedText">
  i'm <em>CHEESED</em>
   to meet you!</pre
-            >
-            <img width="200px" src="assets/speechbubble.png" />
-          </div>
-          <img height="250px" width="250px" src="assets/ratdance.gif" />
-        </div>
-      </section>
-
-      <section class="bottommargin">
-        <h2>Favorite Characters!!!</h2>
-        <h3>awesome...</h3>
-        <div class="relative" id="charSection">
-          <img id="kira" height="175px" src="assets/kira.png" />
-        </div>
-      </section>
-
-      <section>
-        <h2>Games</h2>
-        <div>
-          <img id="games" src="assets/plaguery.gif" />
-        </div>
-        <button>mouse</button>
-      </section>
+                >
+                <img width="200px" src="assets/speechbubble.png" />
+              </div>
+              <img height="250px" width="250px" src="assets/ratdance.gif" />
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
 
     <aside class="sidebar">
@@ -121,6 +108,7 @@
           ><img src="assets/plaguery.gif"
         /></a>
       </div>
+      <br />
       <div class="center">
         <h3>UPDATES</h3>
         <p>currently working on</p>
@@ -132,21 +120,59 @@
       </div>
     </aside>
   </div>
-  <marquee scrollamount="12">
-    <img src="assets/plaguery2.gif" />
-    <img src="assets/seekers.png" />
-    <img src="assets/www.png" />
-    <img src="assets/roadkill.gif" />
-    <img src="assets/bestviewed.gif" />
-    <img src="assets/dontcopy.gif" />
-    <img src="assets/bcs.gif" />
-    <img src="assets/sweeper.gif" />
-    <img src="assets/jojo.gif" />
-    <img src="assets/canadian.gif" />
-    <img src="assets/bestvieweddesktop.gif" />
-    <img src="assets/wallbreakers.gif" />
-    <img src="assets/getsmile.gif" />
-  </marquee>
+
+  <div class="seekerring-frame">
+    <style>
+      :root {
+        --seekerwidth: 25rem;
+        --seekerheight: 4.5rem;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://ring.truthofseekers.net/assets/css/seekerframe.css"
+    />
+    <iframe src="https://ring.truthofseekers.net/embed/plaguery"></iframe>
+  </div>
+  <br />
+
+  <div class="marquee">
+    <div>
+      <img src="assets/plaguery2.gif" />
+      <img src="assets/seekers.png" />
+      <img src="assets/www.png" />
+      <img src="assets/roadkill.gif" />
+      <img src="assets/bestviewed.gif" />
+      <img src="assets/dontcopy.gif" />
+      <img src="assets/bcs.gif" />
+      <img src="assets/sweeper.gif" />
+      <img src="assets/jojo.gif" />
+      <img src="assets/canadian.gif" />
+      <img src="assets/bestvieweddesktop.gif" />
+      <img src="assets/wallbreakers.gif" />
+      <img src="assets/getsmile.gif" />
+      <img height="30px" src="assets/jojolands.gif" />
+      <img src="assets/p4g.gif" />
+    </div>
+
+    <div>
+      <img src="assets/plaguery2.gif" />
+      <img src="assets/seekers.png" />
+      <img src="assets/www.png" />
+      <img src="assets/roadkill.gif" />
+      <img src="assets/bestviewed.gif" />
+      <img src="assets/dontcopy.gif" />
+      <img src="assets/bcs.gif" />
+      <img src="assets/sweeper.gif" />
+      <img src="assets/jojo.gif" />
+      <img src="assets/canadian.gif" />
+      <img src="assets/bestvieweddesktop.gif" />
+      <img src="assets/wallbreakers.gif" />
+      <img src="assets/getsmile.gif" />
+      <img height="30px" src="assets/jojolands.gif" />
+      <img src="assets/p4g.gif" />
+    </div>
+  </div>
 
   <div id="mobile">
     <h1>oh! a mobile user</h1>
@@ -154,23 +180,6 @@
     <p>outta luck here buddy</p>
   </div>
   <a href="error.html"
-    ><img
-      height="40px"
-      with="40px"
-      src="https://kadustoff.neocities.org/assets/images/slashgo.png"
+    ><img height="40px" with="40px" src="assets/trash.ico"
   /></a>
 </body>
-
-<div class="seekerring-frame">
-  	<style>
-		:root {
-			--seekerwidth: 25rem;
-			--seekerheight: 4.5rem;
-		}
-		</style>
-  <link
-    rel="stylesheet"
-    href="https://ring.truthofseekers.net/assets/css/seekerframe.css"
-  />
-  <iframe src="https://ring.truthofseekers.net/embed/plaguery"></iframe>
-</div>

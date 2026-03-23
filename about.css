@@ -6,6 +6,13 @@
   margin: 0 auto;
 }
 
+#aboutText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0% 5%;
+}
+
 #avatar {
   background-color: white;
   margin: 15px auto;
@@ -40,6 +47,7 @@
 }
 
 #stats {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
