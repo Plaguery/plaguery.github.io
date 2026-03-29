@@ -75,6 +75,10 @@
   margin: 0 auto;
 }
 
+section {
+  height: auto;
+}
+
 #projectText * {
   text-align: center;
 }
