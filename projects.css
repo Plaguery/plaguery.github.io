@@ -54,15 +54,18 @@
 }
 
 .projectCard {
-  padding: 10px;
-  background-color: grey;
-  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+  background-color: rgba(255, 255, 255, 0.37);
+  margin: 1%;
   border-radius: 8px;
   flex: 0 0 20em;
   height: 25em;
   scroll-snap-align: center;
   scroll-snap-stop: always;
   overflow: hidden;
+  justify-content: center;
 }
 
 .projectCard:hover {
@@ -75,14 +78,6 @@
   margin: 0 auto;
 }
 
-section {
-  height: auto;
-}
-
 #projectText * {
   text-align: center;
-}
-::selection {
-  color: white;
-  background-color: black;
 }

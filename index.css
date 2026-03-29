@@ -5,12 +5,12 @@
 }
 
 .sidebar {
-  padding-top: 15px;
+  padding: 15px 2px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 15%;
+  width: 14%;
   background-color: rgba(255, 255, 255, 0.795);
   color: rgb(34, 2, 2);
 }
@@ -90,6 +90,11 @@
 #gameSection {
   position: relative;
 }
+
+#charSection img {
+  height: 10rem;
+  width: auto;
+}
 @media (max-width: 1024px) {
   #cheeseBox {
     left: 10;
@@ -104,5 +109,26 @@
 @media (max-width: 425px) {
   .about {
     width: 100vw;
+  }
+
+  #cheeseBox {
+    display: none;
+  }
+
+  .relative img {
+    width: 120%;
+    height: auto;
+  }
+
+  #mobile {
+    display: block;
+  }
+
+  #welcome {
+    display: none;
+  }
+
+  #mainwrapper {
+    margin: 0px;
   }
 }

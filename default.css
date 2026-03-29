@@ -45,7 +45,7 @@ a {
 section {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto;
   width: auto;
   background-color: rgba(255, 255, 255, 0.136);
   padding: 10px;
@@ -138,7 +138,7 @@ section {
 .marquee div {
   animation-name: marquee-content;
   animation-iteration-count: infinite;
-  animation-duration: 4s;
+  animation-duration: 12s;
   animation-timing-function: linear;
 }
 
@@ -179,23 +179,7 @@ section {
     font-size: small;
   }
 
-  .relative {
-    display: none;
-  }
-
   .wiggle {
     display: none;
-  }
-
-  #mobile {
-    display: block;
-  }
-
-  #welcome {
-    display: none;
-  }
-
-  #mainwrapper {
-    margin: 0px;
   }
 }

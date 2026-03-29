@@ -24,9 +24,11 @@ async function getBadgeIconUrl(badgeId) {
       throw new Error(response.status);
     }
     const data = await response.json();
+    console.log(data);
     return data["data"][0]["imageUrl"];
   } catch (error) {
     console.log(error);
+    return "assets/placeholder.png";
   }
 }
 
@@ -45,6 +47,7 @@ async function displayBadges() {
     //fetches badge image
     const iconUrl = await getBadgeIconUrl(id);
     var badgeIcon = document.createElement("img");
+    console.log(iconUrl);
     badgeIcon.setAttribute("src", iconUrl);
     badgeIcon.setAttribute("height", "100px");
     badgeIcon.setAttribute("width", "100px");
