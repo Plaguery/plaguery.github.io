@@ -20,8 +20,11 @@ const currPlaying = document.querySelector("#current");
 const skipButton = document.querySelector("#skip");
 const replayButton = document.querySelector("#replay");
 const volume = document.querySelector("#volume");
+const audioButton = document.querySelector("#audioButton");
+var isMuted = false;
 var isPlaying = false;
 var currentSong = 0;
+var vol = 50;
 
 const trackList = [
   new Song("Take Me Out", "audio/takemeout.mp3"),
@@ -42,9 +45,10 @@ playButton.addEventListener("click", () => {
   }
 });
 
-//get the volume value
+//changes volume
 volume.oninput = () => {
   player.volume = volume.value / 100.0;
+  vol = player.volume;
 };
 
 //skips a song
@@ -72,6 +76,18 @@ replayButton.addEventListener("click", () => {
   }
 });
 
+//mutes/unmutes the song
+audioButton.addEventListener("click", () => {
+  isMuted = !isMuted;
+  if (isMuted) {
+    audioButton.src = "assets/audiomuted.png";
+    player.volume = 0;
+  } else {
+    audioButton.src = "assets/audio.png";
+    //volume level is saved from before the mute!!
+    player.volume = vol;
+  }
+});
 //changes song
 function changeSong() {
   //checks if overflow & loops back around

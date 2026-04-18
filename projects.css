@@ -6,6 +6,23 @@
   transform: rotateY(180deg);
 }
 
+.linkButton {
+  text-align: center;
+  font-weight: bolder;
+  margin: 5% 0%;
+  padding: 5%;
+  border-radius: 5px;
+  margin-top: auto;
+  background-color: #ffffff;
+  color: #220202;
+}
+
+.linkButton:hover {
+  transition: all 0.5s;
+  background-color: #220202;
+  color: #ffffff;
+}
+
 .carousel {
   margin: 0px;
   display: flex;
@@ -65,7 +82,7 @@
   scroll-snap-align: center;
   scroll-snap-stop: always;
   overflow: hidden;
-  justify-content: center;
+  justify-content: start;
 }
 
 .projectCard:hover {
