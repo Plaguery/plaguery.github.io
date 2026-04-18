@@ -7,7 +7,7 @@ I'd include images but it's simpler to just go and see for yourself! i hid a lit
 
 # Changelog
 
-04/17/2026 -> Updated projects (added Dress Up & Job Interview Simulator.) Built a music player as well
+04/17/2026 -> Updated projects (added card for Dress Up & Job Interview Simulator.) Built a music player as well
 
 # Attributions
 
