@@ -24,8 +24,8 @@ const audioButton = document.querySelector("#audioButton");
 var isMuted = false;
 var isPlaying = false;
 var currentSong = 0;
-var vol = 50;
-player.volume = 20;
+var vol = 0.2;
+player.volume = vol;
 
 const trackList = [
   new Song("Take Me Out", "audio/takemeout.mp3"),
